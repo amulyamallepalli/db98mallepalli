@@ -7,6 +7,39 @@ a {
   color: #00B7FF;
 }
 .costumeAttr {
-  background-color: aquamarine;
-  width: 120px;
+  background-color: rgb(230, 148, 148);
+  width: 200px;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-weight: bolder;
+}
+#TeaTitle{
+  color: whitesmoke;
+  width: 70%;
+  text-align: center;
+  font-weight: 600;
+  font-family:'Times New Roman', Times, serif;
+  text-decoration:underline;
+  background-color: rgb(63, 59, 58);
+}
+
+.tea{
+  margin: 2px;
+  padding: 10px;
+  justify-content:center;
+  font-weight: 600;
+  border: 2px solid rgb(243, 194, 194);
+  border-radius: 5px;
+  background-color: rgb(189, 192, 194);
+}
+.spcl{
+    /* border-top: 2px solid red; */
+    width: 40%;
+}
+.tea:hover{
+  background-color: rgb(42, 72, 73);
+  color: white;
+  font-weight: 800;
 }

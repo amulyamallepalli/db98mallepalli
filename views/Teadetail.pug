@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= title
+  h1(id="TeaTitle")= title
 
   - let costumeid = toShow._id
   - let Brand = toShow.Brand
@@ -10,14 +10,14 @@ block content
   div
     div.row
       div(class='costumeAttr mr-3') Costume ID is:
-      div #{costumeid}
+      div(class='tea spcl') #{costumeid}
     div.row
       div(class='costumeAttr mr-3') Brand is:
-      div #{Brand}
+      div(class='tea') #{Brand}
     div.row
       div(class='costumeAttr mr-3') Flavour is:
-      div #{Flavour}
+      div(class='tea') #{Flavour}
     div.row
       div(class='costumeAttr mr-3') Cost is:
-      div #{Cost}
+      div(class='tea') #{Cost}
 
