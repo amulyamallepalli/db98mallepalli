@@ -2,8 +2,7 @@ extends layout
 
 block content
   h1= title
-  - let result=[{Brand:"Taj Mahal",Flavour:"Cinnamon",Cost:20.56},{Brand:"3 Roses",Flavour:"Caramel",Cost:39.9},{Brand :"Red Label",Flavour:"Chocolate",Cost:45.34}] 
-    div(class="container-fluid mt-3")
+  - let result=results  
     div(class="row")
       each form,index in result
         div(class = "col-sm-2" onclick=`buy(${index})`) #{form.Brand}- #{form.Flavour}- #{form.Cost}

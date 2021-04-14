@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+
+  - let costumeid = toShow._id
+  - let Brand = toShow.Brand
+  - let Flavour = toShow.Flavour
+  - let Cost = toShow.Cost
+  div
+    div.row
+      div(class='costumeAttr mr-3') Costume ID is:
+      div #{costumeid}
+    div.row
+      div(class='costumeAttr mr-3') Brand is:
+      div #{Brand}
+    div.row
+      div(class='costumeAttr mr-3') Flavour is:
+      div #{Flavour}
+    div.row
+      div(class='costumeAttr mr-3') Cost is:
+      div #{Cost}
+
