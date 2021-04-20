@@ -3,26 +3,29 @@ extends layout
 block content
   h1= title
 
-  - let costumeid = toShow._id
-  - let Brand = toShow.Brand
-  - let Flavour = toShow.Flavour
-  - let Cost = toShow.Cost
+  if (toShow == null)
+    h2 No instance to update 
+  else
+    - let costumeid = toShow._id
+    - let Brand = toShow.Brand
+    - let Flavour = toShow.Flavour
+    - let Cost = toShow.Cost
   
-  div.row(class='mb-2')
-    div.mr-1 ID is
-    div #{costumeid}
-  - let actionid = "/resource/resource/Teas/" + costumeid
-  form(id='TeaForm', action= actionid, method="PUT")
-    div.form-group
-        label.costumeAttr(for='Brand') Brand
-        input#costumetype(type='text', name='Brand', value= Brand )
-    div.form-group
-        label.costumeAttr(for='Flavour') Flavour
-        input#size(type='text', name='Flavour', value= Flavour )
-    div.form-group
-        label.costumeAttr(for='Cost') Cost
-        input#cost(type='number', name='Cost', value= Cost )
-    input(type="submit")
+    div.row(class='mb-2')
+      div.mr-1 ID is
+      div #{costumeid}
+    - let actionid = "/resource/resource/Teas/" + costumeid
+    form(id='TeaForm', action= actionid, method="PUT")
+      div.form-group
+          label.costumeAttr(for='Brand') Brand
+          input#costumetype(type='text', name='Brand', value= Brand )
+      div.form-group
+          label.costumeAttr(for='Flavour') Flavour
+          input#size(type='text', name='Flavour', value= Flavour )
+      div.form-group
+          label.costumeAttr(for='Cost') Cost
+          input#cost(type='number', name='Cost', value= Cost )
+      input(type="submit")
 
   script.
     document.forms['TeaForm'].addEventListener('submit', (event) => {

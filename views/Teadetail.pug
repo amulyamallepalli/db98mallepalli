@@ -3,21 +3,24 @@ extends layout
 block content
   h1(id="TeaTitle")= title
 
-  - let costumeid = toShow._id
-  - let Brand = toShow.Brand
-  - let Flavour = toShow.Flavour
-  - let Cost = toShow.Cost
-  div
-    div.row
-      div(class='costumeAttr mr-3') Costume ID is:
-      div(class='tea spcl') #{costumeid}
-    div.row
-      div(class='costumeAttr mr-3') Brand is:
-      div(class='tea') #{Brand}
-    div.row
-      div(class='costumeAttr mr-3') Flavour is:
-      div(class='tea') #{Flavour}
-    div.row
-      div(class='costumeAttr mr-3') Cost is:
-      div(class='tea') #{Cost}
+  if (toShow == null)
+    h2 No instance to show details
+  else
+    - let costumeid = toShow._id
+    - let Brand = toShow.Brand
+    - let Flavour = toShow.Flavour
+    - let Cost = toShow.Cost
+    div
+      div.row
+        div(class='costumeAttr mr-3') Costume ID is:
+        div(class='tea spcl') #{costumeid}
+      div.row
+        div(class='costumeAttr mr-3') Brand is:
+        div(class='tea') #{Brand}
+      div.row
+        div(class='costumeAttr mr-3') Flavour is:
+        div(class='tea') #{Flavour}
+      div.row
+        div(class='costumeAttr mr-3') Cost is:
+        div(class='tea') #{Cost}
 
