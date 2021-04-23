@@ -38,8 +38,8 @@ exports.Tea_create_post = async function (req, res) {
         res.send(result);
     }
     catch (err) {
-        res.send(`{"error": ${err}}`)
-        res.status(500);
+        res.send(err)
+        res.status(500)
     }
 };// Handle Tea delete form on DELETE.
 exports.Tea_delete = async function(req, res) {

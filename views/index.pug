@@ -1,14 +1,26 @@
-extends layout
+//- extends layout
 
+//- block content
+//-   h1= title
+//-   p Welcome to #{title}, Web-Apps and Services
+//-    button(type="button", class="btn btn-secondary btn-lggit add ." onclick="update()") Press me
+//-   div(id="target" class="container text-center m-2 p-3" style="color:blue;font-weight:600; background-color:lightgrey;") Display
+//-   script. 
+//-       var client_count=0 
+//-       function update(){
+//-         client_count++;
+//-         document.getElementById("target").innerHTML=`Value now ${client_count}`
+//-       }
+//-   a(href="/Tea") go to Tea
+
+extends layout
 block content
-  h1= title
-  p Welcome to #{title}, Web-Apps and Services
-   button(type="button", class="btn btn-secondary btn-lggit add ." onclick="update()") Press me
-  div(id="target" class="container text-center m-2 p-3" style="color:blue;font-weight:600; background-color:lightgrey;") Display
-  script. 
-      var client_count=0 
-      function update(){
-        client_count++;
-        document.getElementById("target").innerHTML=`Value now ${client_count}`
-      }
-  a(href="/Tea") go to Tea
+  if (!user)
+    a(href="/login") Login
+    br
+    a(href="/register") Register
+  if (user)
+    p You are currently logged in as #{user.username}
+    a(href="/Tea") Take me to Tea
+    br
+    a(href="/logout") Logout
